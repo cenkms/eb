@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <title>Elite Boxes Price Calc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'segue UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            padding: 2rem;
+        }
+        input {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 80px;
+        }
+        input.tl{
+            text-align: right;
+        }
+    </style>
+    
+</head>
+<body
+    <header>
+        <h1>Elite Boxes</h1>
+    </header>
+    <div id="app">
+        <!-- <div>{{message}}</div> -->
+        <div>Product $<input step="10" type="number" v-model="p" @change="calc"></div>
+        <div>dollar rate <input step=".5" type="number" v-model="r" @change="calc"></div>
+        <div>shipment <input class="tl" step="50" type="number" v-model="s" @change="calc">TL</div>
+        <div>card comm %<input step=".5" type="number" v-model="c" @change="calc"></div>
+        <div>extra <input class="tl" step="100" type="number" v-model="e" @change="calc">TL</div>
+        <div>cost = ${{ cost }}</div>
+    </div>
+    <!-- <footer> 
+        <p>&copy; 2023</p>
+    </footer>-->
+    <script src="script.js"></script>
+</body>
+</html>
