@@ -27,7 +27,9 @@ script.onload = () => {
                 const s = parseFloat(this.s);
                 const c = parseFloat(this.c);
                 const e = parseFloat(this.e);
-                const midp = p+s+e;
+                const shipment = s / r;;
+                const extra = e /r;
+                const midp = p + Math.round(shipment * 100) / 100 + Math.round(extra * 100) / 100;
                 const cost = midp / (1 - c / 100); 
                 this.cost = Math.round(cost * 100) / 100;
             }
