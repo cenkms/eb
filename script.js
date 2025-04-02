@@ -8,7 +8,6 @@ script.onload = () => {
     const app = Vue.createApp({
         data() {
             return {
-                message: 'Hello, cenk!',
                 p: 0,
                 r: 41,
                 s: 200,
@@ -27,7 +26,7 @@ script.onload = () => {
                 const s = parseFloat(this.s);
                 const c = parseFloat(this.c);
                 const e = parseFloat(this.e);
-                const shipment = s / r;;
+                const shipment = s / r;
                 const extra = e /r;
                 const midp = p + Math.round(shipment * 100) / 100 + Math.round(extra * 100) / 100;
                 const cost = midp / (1 - c / 100); 
